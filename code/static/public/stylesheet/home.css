@@ -91,6 +91,9 @@ table {
 .footer {
   background-color: #eee;
 }
+.header article nav, .header .topRight .login {
+  display: block;
+}
 
 @media (min-width: 900px) {
   .header, .footer {

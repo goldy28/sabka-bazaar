@@ -1,41 +1,16 @@
+import SabkiService from '../services/dataService';
 export default class HomepageComponent {
     constructor(parent) {
         this.parent = parent;
         this.render();
+        this.allService = new SabkiService();
     }
 
     render() {
-        let markup = `<header class="header">
+        // this.allService.bannerURL(result) => {
 
-        <article class="logo">
-            <img src="static/images/logo.png" id="logoimg"/>
-        </article>
-
-        <article>
-                <nav>
-                    <ul>
-                        <li>Home</li>
-                        <li>Products</li>
-                    </ul>
-                </nav>
-        </article>    
-        
-        <section class="topRight">
-            <article class="login">
-                <span>SignIn</span>
-                <span>Register</span>
-            </article>
-            <article class="cart">
-                <span class="cartImage">
-                    <img src="static/images/cart.svg" />
-                    <span>0 items</span>
-                </span>
-                
-            </article>
-        </section>
-</header>
-<main class="mainHome">
-    <section class="slider">
+        // }
+        let markup = `<section class="slider">
         <img src="static/images/offers/offer5.jpg"/>
     </section>
     <section class="category-containner">
@@ -58,7 +33,7 @@ export default class HomepageComponent {
                 <article class="description">
                     <h2>Bakery Cakes and Diary</h2>
                     <p>The best cupcakes, cookies, cakes, pies, cheesecakes, frsh bread, biscotti, muffins, bagels, fresh coffee, milk and more.</p>
-                    <a href="">Explore friut-and-veg</a>
+                    <a id="fruit" href="">Explore friut-and-veg</a>
                 </article>
         </section>
 
@@ -94,11 +69,7 @@ export default class HomepageComponent {
                     <a href="">Explore Baby</a>
                 </article>
         </section>
-    </section>
-</main>
-<footer class="footer">
-    Copyright &#9400; 2011-2018 Sabka Bazzar Grocery Supplies Pvt Ltd
-</footer>`;
+    </section>`;
         $(this.parent).html(markup);
     }
 }
